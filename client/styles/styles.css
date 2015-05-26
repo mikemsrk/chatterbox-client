@@ -6,7 +6,7 @@ body {
 }
 
 #main {
-    width: 500px;
+    width: 800px;
     margin: auto;
     text-align: left;
     background: white;
@@ -54,7 +54,7 @@ form {
 
 form input[type=text] {
     margin-right: 10px;
-    width: 70%;
+    width: 150px;
     font-size: 12px;
     padding: 5px;
 }
@@ -81,4 +81,12 @@ form input[type=text] {
 
 .spinner img {
     padding: 10px;
+}
+
+#roomSelect {
+    float:right;
+}
+
+form input[name="message"]{
+    width:250px;
 }

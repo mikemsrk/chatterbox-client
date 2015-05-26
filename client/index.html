@@ -15,10 +15,42 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
+
+      <!-- Load Texts -->
       <button type="button" class="refreshBtn">Refresh</button>
-      <!-- Your HTML goes here! -->
-      <div class="messages">
+
+      <!-- Chatroom -->
+      <div id="roomSelect">
+        <form id="chatroom">
+          <h2 id="room">Room: Public</h2>
+          <input type="text" name="roomname">
+          <br>
+          <button type="submit">Create Room</button>
+          <button id="leave">Leave Room</button>
+        </form>
       </div>
+
+
+      <!-- Send Message -->
+      <form id="sender">
+        Username
+        <br>
+        <input type="text" name="username">
+        <br> Message
+        <br>
+        <input type="text" name="message">
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+      <!-- Your HTML goes here! -->
+
+      <!-- SpecRunner -->
+      <div id="chats"></div>
+
+
+      <!-- Ours -->
+      <div class="messages"></div>
+
     </div>
   </body>
 </html>
