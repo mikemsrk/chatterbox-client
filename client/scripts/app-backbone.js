@@ -70,6 +70,41 @@ var FormView = Backbone.View.extend({
 });
 
 
+var Room = Backbone.Model.extend({
+  url: 'https://api.parse.com/1/classes/chatterbox/',
+  defaults: {
+    roomname: ''
+  }
+});
+
+
+var Rooms = Backbone.Collection.extend({
+  model: Room,
+  url: 'https://api.parse.com/1/classes/chatterbox/',
+
+  parse: function(response,options){
+
+    return response.results;
+  }
+});
+
+var RoomView = Backbone.View.extend({
+  tagName: 'blink',
+  template: _.template('<a class="roomID" href="#"><%- roomname %></a><br>'),
+  render: function(){
+    this.$el.html(this.template(this.model.attributes));
+    return this.$el;
+  }
+});
+
+
+var RoomsView = Backbone.View.extend({
+  render: function(){
+
+  }
+});
+
+
 
 
 $(document).ready(function(){
