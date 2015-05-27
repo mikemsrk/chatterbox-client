@@ -5,6 +5,11 @@ body {
     font-family: arial, sans-serif;
 }
 
+p{
+    margin:5px 0;
+
+}
+
 #main {
     width: 800px;
     margin: auto;

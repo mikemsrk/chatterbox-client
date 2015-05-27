@@ -8,9 +8,11 @@
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/backbone/backbone-min.js"></script>
     <!-- your scripts -->
     <script src="env/config.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="scripts/app-backbone.js"></script>
+    <!-- <script src="scripts/app.js"></script> -->
   </head>
   <body>
     <div id="main">
@@ -19,7 +21,7 @@
       <div id="friends"></div>
       <br>
       <!-- Load Texts -->
-      <button type="button" class="refreshBtn">Refresh</button>
+      <!-- <button type="button" class="refreshBtn">Refresh</button> -->
 
       <!-- Chatroom -->
       <div id="roomSelect">
@@ -35,12 +37,10 @@
 
       <!-- Send Message -->
       <form id="sender">
-        Username
-        <br>
-        <input type="text" name="username">
-        <br> Message
-        <br>
-        <input type="text" name="message">
+        <p>Username</p>
+        <input type="text" id="formName">
+        <p>Message</p>
+        <input type="text" id="formMsg">
         <br>
         <button type="submit">Submit</button>
       </form>
